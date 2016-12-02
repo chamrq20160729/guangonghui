@@ -1,0 +1,80 @@
+
+/*弹窗&遮罩样式*/
+#mask{
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #000;
+	opacity: 0.3;
+	filter: alpha(opacity=30);
+}
+#tipBox{
+	position: fixed;
+	top:340px;
+	width: 360px;
+	height: 300px;
+	background: #fff;
+	border-radius: 8px;
+}
+#tipBox input{
+	display: block;
+	width: 300px;
+	height: 40px;
+	margin: 15px auto 0;
+	padding-left: 20px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 14px;
+}
+#login{
+	width: 150px;
+	height: 50px;
+	margin: 20px 105px;
+	color: #fff;
+	background: rgb(255,190,50);
+	font-size: 20px;
+	border: 0;
+	border-radius: 8px;
+	cursor: pointer;
+}
+#login:hover{
+	background: #8d8;
+}
+#tipBox p{
+	margin:15px auto 0;
+	text-align: center;
+	font-size: 20px;
+}
+#tipBox div{
+	width: 300px;
+	margin: 5px auto 0;
+	text-align: center;
+	font-size: 12px;
+}
+#signin{
+	float: left;
+}
+#forgot{
+	float: right;
+}
+#close{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 25px;
+	height: 25px;
+	background: #fff;
+	border: 0;
+	border-radius: 4px;
+	font-size: 20px;
+	line-height: 20px;
+}
+#close:hover{
+	color: red;
+	background: #eee;
+}
+/*#tipBox p i{
+	margin-right: 15px;
+	color: rgb(255,190,50);
+	font-size: 35px;
+}*/
