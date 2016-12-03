@@ -1,0 +1,19 @@
+
+.imgBox{
+	padding: 15px 0;
+}
+.imgBox img{
+	display: block;
+	margin: 0 auto;
+}
+
+.imgList ul{
+	list-style: none;
+}
+.imgList li{
+	width: 20%;
+	float: left;
+}
+.imgList li img{
+	width: 100%;
+}
