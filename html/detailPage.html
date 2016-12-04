@@ -12,13 +12,13 @@
 		</div>-->
 		<div class="container">
 			<div class="productsList row">
-				<div class="productsListLeft col-xs-12 col-md-6">
+				<div class="productsListLeft col-xs-12 col-md-5">
 					<div class="pictureTop">
 						<div class="imgBox">
 							<img src="../imgs/hw1.jpg"/>
 						</div>
 						<div class="imgList">
-							<ul>
+							<ul class="clearfix">
 								<li>
 									<img src="../imgs/hw1.jpg"/>
 								</li>
@@ -38,17 +38,42 @@
 						</div>
 					</div>
 				</div>
-				<div class="productsListRight col-xs-12 col-md-6">
+				<div class="productsListRight col-xs-12 col-md-7">
 					<div class="productsTitle">
-						<p>商品名称</p>
+						<h2>商品名称</h2>
 						<p>商品卖点，商品特色，商品简介等等。。。</p>
 					</div>
 					<div class="monery">
-						<p class="moneryNow">1888</p>
-						<p class="moneryOld">3888</p>
+						<h4>市场价:</h4>
+						<p class="moneryOld">￥3888 元</p>
+						<h4>本店价:</h4>
+						<h2 class="moneryNow">￥1888 元</h2>
 					</div>
 					<div class="buyList">
-						
+						<div class="history">
+							<span>销量:</span>
+							<span>最近售出</span>
+							<span id="nub">xx</span>
+							<span>件</span>
+						</div>
+						<div class="shopNub">
+							<span>数量:</span>
+							<div class="dnubBox">
+								<i>-</i>
+								<input type="text" min="1" id="dnub" value="1" onchange="" />
+								<i>+</i>
+							</div>
+						</div>	
+						<div>
+							<span>库存:</span>
+							<span>剩余</span>
+							<span id="nub">XXX</span>
+							<span>件</span>
+						</div>
+						<div class="shopButton">
+							<button>加入购物车</button>
+							<button>立刻购买</button>
+						</div>
 					</div>
 				</div>
 			</div>

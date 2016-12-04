@@ -1,6 +1,22 @@
-
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+.clearfix::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+/*商品左边图片库*/
+.productsListLeft{
+	border: 1px solid #CCC;
+	padding: 0;
+}
 .imgBox{
 	padding: 15px 0;
+	
 }
 .imgBox img{
 	display: block;
@@ -8,12 +24,61 @@
 }
 
 .imgList ul{
-	list-style: none;
+	margin: 0 auto;
 }
 .imgList li{
-	width: 20%;
 	float: left;
+	width: 20%;
+	padding: 5px;
+	border: 1px solid #ccc;
+	cursor: pointer;
 }
 .imgList li img{
 	width: 100%;
+}
+/*商品右边详情*/
+.productsListRight{
+	padding-left: 5%;
+}
+.productsTitle p{
+	color: red;
+}
+.monery{
+	padding: 5px;
+	/*background: #f3f3f3;*/
+	border-radius: 4px;
+}
+.moneryNow{
+	color: red;
+	font-family: "microsoft yahei";;
+}
+.moneryOld{
+	text-decoration: line-through;
+	font-size: 20px
+}
+.buyList{
+	padding: 5px;
+}
+#nub{
+	color: red;
+}
+
+.dnubBox{
+	width: 25%;
+	border: 1px solid #ccc;
+}
+.dnubBox input{
+	width: 50%;
+	height: 40px;
+	border: 0;
+}
+.dnubBox i{
+	display: inline-block;
+	width: 22.2%;
+	height: 40px;
+	
+	background: #ccc;
+	text-align: center;
+	line-height: 40px;
+	
 }
