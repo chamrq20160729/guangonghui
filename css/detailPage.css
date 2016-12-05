@@ -14,26 +14,26 @@
 	border: 1px solid #CCC;
 	padding: 0;
 }
-.imgBox{
+#imgBox{
 	padding: 15px 0;
 	
 }
-.imgBox img{
+#imgBox img{
 	display: block;
 	margin: 0 auto;
 }
 
-.imgList ul{
+#imgList ul{
 	margin: 0 auto;
 }
-.imgList li{
+#imgList li{
 	float: left;
 	width: 20%;
 	padding: 5px;
 	border: 1px solid #ccc;
 	cursor: pointer;
 }
-.imgList li img{
+#imgList li img{
 	width: 100%;
 }
 /*商品右边详情*/
@@ -62,23 +62,62 @@
 #nub{
 	color: red;
 }
-
+.shopNub{
+	margin: 10px 0;
+}
+.shopNub span{
+	line-height: 30px;
+}
 .dnubBox{
-	width: 25%;
+	display: inline-block;
+	width: 15%;
 	border: 1px solid #ccc;
 }
 .dnubBox input{
-	width: 50%;
-	height: 40px;
+	width: 30%;
+	height: 30px;
 	border: 0;
+	font-weight: bold;
 }
 .dnubBox i{
 	display: inline-block;
-	width: 22.2%;
-	height: 40px;
-	
+	width: 30.5%;
+	height: 31px;
 	background: #ccc;
 	text-align: center;
-	line-height: 40px;
+	line-height: 30px;
 	
+}
+
+.dnubBox i:hover{
+	cursor: pointer;
+	-moz-user-select: none;
+}
+.shopButton button{
+	width: 25%;
+	color: #fff;
+	margin: 40px 10px 10px 0;
+	background: rgb(255, 190, 50);
+	font-size: 20px;
+	line-height: 50px;
+	border: 0;
+	border-radius: 8px;
+	transition: all 0.2s;
+}
+
+.shopButton button:hover {
+	background: #4b4;
+}
+/*.productsDetail{
+	overflow: scroll;
+}*/
+.productsDetail h3{
+	padding: 10px;
+	border-bottom: 1px solid #ccc;
+}
+.productsDetail img{
+	display: block;
+	width: 100%;
+	max-width: 750px;
+	margin: auto;
 }
