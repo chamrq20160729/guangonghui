@@ -1,4 +1,5 @@
 .navbar-right p{
+	display: inline-block;
 	padding: 15px 0;
 }
 .navbar-right p a{
@@ -50,6 +51,12 @@
 	cursor: pointer;
 	border-radius: 8px;
 }
+@media(max-width: 768px) {
+	.orderTab li{
+		width: 80%;
+		margin: 5px 0;
+	}
+}
 .orderTab li:hover{
 	background: #aaa;
 }
@@ -63,13 +70,7 @@
 	border-radius: 8px;
 	
 }
-.orderCon li > div > a > div{
-	margin: 5px;
-	background: #ccd;
-}
-.orderCon li > div > a:hover > div{
-	background: #dd0;
-}
+
 .sell{
 	display: inline-block;
 	color: red;
@@ -92,7 +93,6 @@
 	font-size: 16px;
 }
 .productsSell{
-	margin-left: 10px;
 	color: red;
 }
 /*已支付订单*/
@@ -153,7 +153,64 @@
 	border: 1px solid #aaa;
 	border-radius: 8px;
 }
-.collect a >div{
+
+.collect a > div{
 	margin: 5px;
-	background: #ddd;
+	background: #ccd;
+	border-radius: 4px;
+}
+.collect a:hover > div{
+	background: #bdb;
+}
+.collect a > div img{
+	width: 100%;
+	margin: 5px;
+	border-radius: 5px;
+}
+.collect a > div span{
+	display: block;
+}
+.collect a > div > div{
+	float: left;
+}
+.collect a > div > div:last-child{
+	margin-top: 30px;
+}
+@media (max-width:1000px ) {
+	.collect a > div > div:last-child{
+		margin: 10px 0;
+	}
+}
+
+
+
+
+
+
+.orderCon li > div > a > div{
+	margin: 5px;
+	background: #ccd;
+	border-radius: 4px;
+}
+.orderCon li > div > a:hover > div{
+	background: #bdb;
+}
+.orderCon li > div > a > div img{
+	width: 100%;
+	margin: 5px;
+	border-radius: 5px;
+}
+.orderCon li > div > a > div span{
+	display: block;
+}
+.orderCon li > div > a > div > div{
+	float: left;
+}
+.orderCon li > div > a > div > div:last-child{
+	margin-top: 30px;
+}
+@media (max-width:1000px ) {
+	.orderCon li > div > a > div > div:last-child{
+		margin: 10px 0;
+	}
 }

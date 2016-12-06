@@ -70,7 +70,7 @@
 }
 .dnubBox{
 	display: inline-block;
-	width: 15%;
+	width: 20%;
 	border: 1px solid #ccc;
 }
 .dnubBox input{
@@ -81,15 +81,29 @@
 }
 .dnubBox i{
 	display: inline-block;
+	width: 30%;
+	height: 31px;
+	background: #ccc;
+	text-align: center;
+	line-height: 30px;
+}
+.dnubBox .les{
+	float: left;
+}
+.dnubBox .add{
+	float: right;
+}
+.dnubBox i{
+	display: inline-block;
 	width: 30.5%;
 	height: 31px;
 	background: #ccc;
 	text-align: center;
 	line-height: 30px;
-	
 }
 
 .dnubBox i:hover{
+	background: #bbb;
 	cursor: pointer;
 	-moz-user-select: none;
 }
@@ -104,7 +118,11 @@
 	border-radius: 8px;
 	transition: all 0.2s;
 }
-
+@media(max-width: 768px) {
+	.shopButton button{
+	width: 40%;
+	}
+}
 .shopButton button:hover {
 	background: #4b4;
 }
