@@ -54,43 +54,32 @@
 			        </ul>
 			        <ul class="nav navbar-nav navbar-right">
 			        	<li>
-			        		<a id="" href="#">
-			        			<span>XXXX</span>
-			        			<span>欢迎回来!</span>
-				        		<span>注销</span>
-				        	</a>
+			        		<p>
+			        			<span>XXX</span>
+			        			<span>欢迎!</span>
+				        		<a href="#">退出</a>
+				        	</p>
 				        </li>
 				        <li>
 				        	<a id="" href="#">基本信息</a>
 				        </li>
-				        <li class="dropdown">
-				            <a href="#" class="dropdown-toggle" data-toggle="dropdown">订单管理<!--<span class="caret"></span>--></a>
-				            <!--<ul class="dropdown-menu" role="menu">
-					            <li>
-					            	<a href="#">待支付订单</a>
-					            </li>
-					            <li>
-					            	<a href="#">已支付订单</a>
-					            </li>
-					            <li>
-					            	<a href="#">已完成订单</a>
-					            </li>
-				            </ul>-->
+				        <li>
+				            <a href="#">订单管理</a>
 				        </li>
 				        <li class="">
-				          	<a href="">收货地址</a>
+				          	<a href="#">收货地址</a>
 				        </li>
 				        <li class="">
-				         	 <a href="">我的收藏</a>
+				         	 <a href="#">我的收藏</a>
 				        </li>
 			        </ul>
 			    </div>
 		    </div>
 		</nav>	
 		
-		<div class="userTab">
-			<ul class="list-unstyled">
-				<li>
+		<div id="userTab">
+			<ul class="list-unstyled clearfix">
+				<li class="show">
 					<h3>个人资料:</h3>
 					<div class="personalDate">
 						<p class="welcome">
@@ -141,9 +130,9 @@
 					</div>
 					<div class="orderCon">
 						<ul class="list-unstyled">
-							<li>
+							<li class="show">
 								<div class="payBefor">
-									<a href="#">
+									<a href="detailPage.html">
 										<div class="orderProducts">
 											<img src="../imgs/house.jpg"/>
 											<span class="productsName">商品名称</span>
@@ -151,7 +140,7 @@
 											<span class="productsSell">商品价格</span>
 										</div>
 									</a>
-									<a href="#">
+									<a href="detailPage.html">
 										<div class="orderProducts">
 											<img src="../imgs/house.jpg"/>
 											<span class="productsName">商品名称</span>
@@ -165,7 +154,7 @@
 									<button>立即支付</button>
 								</div>
 								<div class="payBefor">
-									<a href="#">
+									<a href="detailPage.html">
 										<div class="orderProducts">
 											<img src="../imgs/house.jpg"/>
 											<span class="productsName">商品名称</span>
@@ -173,7 +162,7 @@
 											<span class="productsSell">商品价格</span>
 										</div>
 									</a>
-									<a href="#">
+									<a href="detailPage.html">
 										<div class="orderProducts">
 											<img src="../imgs/house.jpg"/>
 											<span  class="productsName">商品名称</span>
@@ -189,7 +178,7 @@
 							</li>
 							<li>
 								<div class="payAfter">
-									<a href="#">
+									<a href="detailPage.html">
 										<div class="orderProducts">
 											<img src="../imgs/house.jpg"/>
 											<span class="productsName">商品名称</span>
@@ -197,7 +186,7 @@
 											<span class="productsSell">商品价格</span>
 										</div>
 									</a>
-									<a href="#">
+									<a href="detailPage.html">
 										<div class="orderProducts">
 											<img src="../imgs/house.jpg"/>
 											<span class="productsName">商品名称</span>
@@ -208,7 +197,7 @@
 									<button>查看物流</button>
 								</div>
 								<div class="payAfter">
-									<a href="#">
+									<a href="detailPage.html">
 										<div class="orderProducts">
 											<img src="../imgs/house.jpg"/>
 											<span class="productsName">商品名称</span>
@@ -216,7 +205,7 @@
 											<span class="productsSell">商品价格</span>
 										</div>
 									</a>
-									<a href="#">
+									<a href="detailPage.html">
 										<div class="orderProducts">
 											<img src="../imgs/house.jpg"/>
 											<span class="productsName">商品名称</span>
@@ -229,7 +218,7 @@
 							</li>
 							<li>
 								<div class="orderOff">
-									<a href="#">
+									<a href="detailPage.html">
 										<div class="orderProducts">
 											<img src="../imgs/house.jpg"/>
 											<span class="productsName">商品名称</span>
@@ -237,7 +226,7 @@
 											<span class="productsSell">商品价格</span>
 										</div>
 									</a>
-									<a href="#">
+									<a href="detailPage.html">
 										<div class="orderProducts">
 											<img src="../imgs/house.jpg"/>
 											<span class="productsName">商品名称</span>
@@ -248,7 +237,7 @@
 									<button>再次购买</button>
 								</div>
 								<div class="orderOff">
-									<a href="#">
+									<a href="detailPage.html">
 										<div class="orderProducts">
 											<img src="../imgs/house.jpg"/>
 											<span class="productsName">商品名称</span>
@@ -256,7 +245,7 @@
 											<span class="productsSell">商品价格</span>
 										</div>
 									</a>
-									<a href="#">
+									<a href="detailPage.html">
 										<div class="orderProducts">
 											<img src="../imgs/house.jpg"/>
 											<span class="productsName">商品名称</span>
@@ -299,32 +288,36 @@
 				<li>
 					<h3>我的收藏:</h3>
 					<div class="collect">
-						<a href="#">
+						<a href="detailPage.html">
 							<div>
 								<img src="../imgs/house.jpg"/>
-								<span>商品名称</span>
+								<span class="productsName">商品名称</span>
 								<span>商品卖点商品特色</span>
+								<span class="productsSell">商品价格</span>
 							</div>
 						</a>
-						<a href="#">
+						<a href="detailPage.html">
 							<div>
 								<img src="../imgs/house.jpg"/>
-								<span>商品名称</span>
+								<span class="productsName">商品名称</span>
 								<span>商品卖点商品特色</span>
+								<span class="productsSell">商品价格</span>
 							</div>
 						</a>
-						<a href="#">
+						<a href="detailPage.html">
 							<div>
 								<img src="../imgs/house.jpg"/>
-								<span>商品名称</span>
+								<span class="productsName">商品名称</span>
 								<span>商品卖点商品特色</span>
+								<span class="productsSell">商品价格</span>
 							</div>
 						</a>
-						<a href="#">
+						<a href="detailPage.html">
 							<div>
 								<img src="../imgs/house.jpg"/>
-								<span>商品名称</span>
+								<span class="productsName">商品名称</span>
 								<span>商品卖点商品特色</span>
+								<span class="productsSell">商品价格</span>
 							</div>
 						</a>
 					</div>
@@ -333,5 +326,6 @@
 		</div>
 		<script src="../js/jquery-3.1.0.min.js"></script>
 		<script src="../js/bootstrap.min.js"></script>
+		<script src="../js/user.js"></script>
 	</body>
 </html>

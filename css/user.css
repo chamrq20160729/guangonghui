@@ -1,15 +1,17 @@
-.userTab{
+.navbar-right p{
+	padding: 15px 0;
+}
+.navbar-right p a{
+	color: red;
+}
+#userTab{
 	width: 60%;
 	margin: 0 auto;
 }
-.personalDat li{
-	width: 60%;
-	margin: 60px auto;
-	padding: 2%;
-	background: #f3f3f3;
-	border-radius: 8px;
+#userTab > ul > li{
+	display: none;
 }
-.userTab h3{
+#userTab h3{
 	padding-bottom: 10px;
 	border-bottom: 1px solid #333;
 }
@@ -39,8 +41,8 @@
 #recharge:hover {
 	background: #8d8;
 }
+/*订单管理*/
 .orderTab li{
-	width: 15%;
 	padding: 20px;
 	background: #ddd;
 	font-size: 20px;
@@ -51,6 +53,9 @@
 .orderTab li:hover{
 	background: #aaa;
 }
+.orderCon li{
+	display: none;
+}
 .orderCon li > div{
 	margin: 10px auto;
 	padding: 5px;
@@ -58,9 +63,12 @@
 	border-radius: 8px;
 	
 }
-.orderCon li > div > a >div{
+.orderCon li > div > a > div{
 	margin: 5px;
-	background: #ddd;
+	background: #ccd;
+}
+.orderCon li > div > a:hover > div{
+	background: #dd0;
 }
 .sell{
 	display: inline-block;
