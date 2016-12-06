@@ -1,4 +1,8 @@
-.userTab li{
+.userTab{
+	width: 60%;
+	margin: 0 auto;
+}
+.personalDat li{
 	width: 60%;
 	margin: 60px auto;
 	padding: 2%;
@@ -34,4 +38,114 @@
 }
 #recharge:hover {
 	background: #8d8;
+}
+.orderTab li{
+	width: 15%;
+	padding: 20px;
+	background: #ddd;
+	font-size: 20px;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 8px;
+}
+.orderTab li:hover{
+	background: #aaa;
+}
+.orderCon li > div{
+	margin: 10px auto;
+	padding: 5px;
+	border: 1px solid #aaa;
+	border-radius: 8px;
+	
+}
+.orderCon li > div > a >div{
+	margin: 5px;
+	background: #ddd;
+}
+.sell{
+	display: inline-block;
+	color: red;
+	font-size: 16px;
+}
+.payBefor > button{
+	padding:2 5px;
+	color: #fff;
+	background: rgb(255, 190, 50);
+	font-size: 16px;
+	border: 0;
+	border-radius: 8px;
+}
+.payBefor > button:hover {
+	background: #8d8;
+}
+.productsName{
+	margin-right: 10px;
+	color: red;
+	font-size: 16px;
+}
+.productsSell{
+	margin-left: 10px;
+	color: red;
+}
+/*已支付订单*/
+.payAfter > button{
+	padding:2 5px;
+	color: #fff;
+	background: #337;
+	font-size: 16px;
+	border: 0;
+	border-radius: 8px;
+}
+.payAfter > button:hover {
+	background: rgb(50, 150, 190);	
+	
+}
+/*已支付订单*/
+.orderOff > button{
+	padding:2 5px;
+	color: #fff;
+	background: #181;
+	font-size: 16px;
+	border: 0;
+	border-radius: 8px;
+}
+.orderOff > button:hover{
+	background: rgb(50, 190, 50);	
+}
+/*收货地址*/
+.address span{
+	font-size: 22px;
+}
+.address p button{
+	padding:2 5px;
+	color: #222;
+	background: #ccc;
+	font-size: 16px;
+	border: 0;
+	border-radius: 8px;
+}
+.address p button:hover{
+	background: #666;
+}
+.address > button{
+	padding:2 5px;
+	color: #fff;
+	background: #822;
+	font-size: 16px;
+	border: 0;
+	border-radius: 8px;
+}
+.address > button:hover{
+	background: rgb(100, 100, 50);
+}
+/*我的收藏*/
+.collect {
+	margin: 10px auto;
+	padding: 5px;
+	border: 1px solid #aaa;
+	border-radius: 8px;
+}
+.collect a >div{
+	margin: 5px;
+	background: #ddd;
 }
