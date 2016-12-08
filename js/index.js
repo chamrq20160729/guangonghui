@@ -102,4 +102,10 @@ window.onload = function(){
 	function stopPlay(){
 		clearInterval(timer);
 	}
+//	alert($("#menuTwo ul li").length)	
+//	阻止二级菜单弹回
+	$("#menuTwo").children().children("li").click(function(){
+//	lert($("#menuTwo").children("ul").length)
+	$("#menuTwo").addClass("open");
+	})
 }

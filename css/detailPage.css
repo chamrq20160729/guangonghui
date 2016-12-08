@@ -76,6 +76,7 @@
 .dnubBox input{
 	width: 30%;
 	height: 30px;
+	padding-left: 4px;
 	border: 0;
 	font-weight: bold;
 }

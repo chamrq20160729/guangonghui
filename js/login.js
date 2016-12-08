@@ -1,7 +1,7 @@
-function $(id){
+function getId(id){
 	return typeof id == "string" ? document.getElementById(id) : id;
 }
-$(login2).onclick = function(){
+getId(login2).onclick = function(){
 	//页面高度和宽度
 	var sHeight = document.documentElement.scrollHeight;
 	var sWidth = document.documentElement.scrollWidth;
