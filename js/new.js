@@ -1,23 +1,28 @@
-//$("#list3").click(function(){
-//	
-//	alert('')
-//})
 $(function(){
-	
-	
-	$("nav").find("*").click(function(){
+
+//	$("nav li").not("#list3").click(function(){
+//		if($("#list3").children("ul").attr("class") == "dropdown-menu show"){
+////		$(".dropdown-menu").removeClass("show");
+////		console.log("单击导航条，取消显示")
+//		}
+//	})
+	$("#list3").click(function(){
 		if($("#list3").children("ul").attr("class") == "dropdown-menu show"){
-				$(".dropdown-menu").removeClass("show");
+			$(".dropdown-menu").removeClass("show");
+			console.log("再次单击,取消显示")
 		}
 		else{
-//			if($("#list3").click() == true){
-				$("#list3").click(function (e){
-					e.stopPropagation();
-				})
-				$("#list3").click(function(){
-					$(".dropdown-menu").addClass("show");
-				})
-//			}
+			$("#list3").click(function (e){
+				e.stopPropagation();
+			})
+			$(".dropdown-menu").addClass("show");
+			console.log("显示")
+		}
+	})
+	$("*").click(function(){
+		if($("#list3").children("ul").attr("class") == "dropdown-menu show"){
+		$(".dropdown-menu").removeClass("show");
+		console.log("单击导航条，取消显示")
 		}
 	})
 })

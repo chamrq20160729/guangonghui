@@ -323,22 +323,7 @@ li > button:hover{
 	background: #7da;
 	cursor: pointer;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*三级菜单*/
 .dropdown-submenu {  
     position: relative;  
 }  
@@ -362,3 +347,18 @@ li > button:hover{
     -moz-border-radius: 6px 0 6px 6px;  
     border-radius: 6px 0 6px 6px;  
 }  
+/*商品列表页，更多*/
+.more{
+	display: block;
+	width: 60%;
+	height: 40px;
+	margin: 0 auto;
+	background: #ccc;
+	font-size: 16px;
+	border: 0;
+	border-radius: 4px;
+}
+.more:hover{
+	color: #fff;
+	background: #666;
+}
