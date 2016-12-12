@@ -3,20 +3,123 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>快速充值</title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/footer.css"/>
 	</head>
 	<body>
+		<nav class="navbar navbar-default changeColor" role="navigation">
+		    <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					    <span class="sr-only">Toggle navigation</span>
+					    <span class="icon-bar"></span>
+					    <span class="icon-bar"></span>
+					    <span class="icon-bar"></span>
+					  </button>
+					<a class="navbar-brand" href="#">logo</a>
+				</div>
+		
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
+			        <ul class="nav navbar-nav">
+				        <li>
+				        	<a href="#">公告</a>
+				        </li>
+				        <li>
+				        	<a href="#">会员系统</a>
+				        </li>
+				        <li class="dropdown">
+				            <a href="#" class="dropdown-toggle" data-toggle="dropdown">产品系列<span class="caret"></span></a>
+				            <ul class="dropdown-menu" role="menu">
+					            <li>
+					            	<a href="#">系列1</a>
+					            </li>
+					            <li>
+					            	<a href="#">系列2</a>
+					            </li>
+					            <li>
+					            	<a href="#">系列3</a>
+					            </li>
+					            <li class="divider"></li>
+					            <li>
+					            	<a href="#">限时大促</a>
+					            </li>
+					            <li class="divider"></li>
+					            <li>
+					            	<a href="#">所有产品</a>
+					            </li>
+				            </ul>
+				        </li>
+			        </ul>
+			        <form class="navbar-form navbar-left" role="search">
+				        <div class="form-group">
+				          <input type="text" class="form-control" placeholder="请输入关键字">
+				        </div>
+				        <button type="submit" class="btn btn-default">搜索</button>
+				    </form>
+			        <ul class="nav navbar-nav navbar-right">
+				        <li>
+				        	<a id="login2" href="#">登陆</a>
+				        </li>
+				        <li class="dropdown">
+				            <a href="html/signIn.html">注册</a>
+				        </li>
+			        </ul>
+			    </div>
+		    </div>
+		</nav>
 		<div id="payBox">
 			<h2>快速充值</h2>
 			<form action="#" method="post">
 				<input type="text" name="money" id="monery" value="" placeholder="请输入充值金额"/>
-				<div class="payWrap">
-					<button class="aliPay">支付宝充值</button>
-					<button class="tenPay">微信充值</button>
+				<div class="payWrap clearfix">
+					<button class="aliPay" style="width: 45%;">支付宝充值</button>
+					<button class="tenPay" style="width: 45%;">微信充值</button>
 				</div>
 				<!--<input type="password" name="paypassword" id="payPassWord" value="" placeholder="请输入支付密码"/>-->
 			</form>
 		</div>
+		<div class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="left col-md-4 col-xs-12">
+						<span>创维集团有限公司版权所有</span>
+						<span>粤ICP备15057125号</span>
+					</div>
+					<div class="col-md-3 col-xs-12" id="sel">
+						<select>
+							<option value="#">集团成员网站 >></option>
+							<option value="#">创维盒子</option>
+							<option value="#">创维集团财务有限公司</option>
+							<option value="#">创维酷开社区</option>
+							<option value="#">创维液晶器件（深圳）有限公司</option>
+							<option value="#">创维淘宝旗舰店</option>
+							<option value="#">创维建设发展有限公司</option>
+							<option value="#">南京创维电器科技有限公司</option>
+							<option value="#">深圳市创维群欣安防科技股份有限公</option>
+							<option value="#">深圳创维数字技术有限公司</option>
+						</select>
+					</div>
+					<div class="right col-md-4 col-xs-12">
+						<ul>
+							<li>
+								<a href="#">法律声明</a>
+							</li>
+							<li>
+								<a href="#">网站地图</a>
+							</li>
+							<li>
+								<a href="#">联系我们</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../js/jquery-3.1.0.min.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
 	</body>
 </html>
 

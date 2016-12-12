@@ -1,0 +1,51 @@
+
+.footer {
+	height: 40px;
+	padding: 0;
+	background: #def;
+
+}
+.footerInner {
+	width: 1000px;
+	height: 20px;
+	margin: 0 auto;
+}
+.footer span {
+	display: inline-block;
+	line-height: 40px;
+	color: #777;
+}
+.footer span:first-child {
+	margin-right: 10px;
+}
+.right ul {
+	float: right;
+	height: 40px;
+	margin-right: 20px;
+	margin-bottom: 0;
+	list-style: none;
+}
+.footer ul li {
+	float: left;
+}
+.footer ul li a {
+	display: block;
+	line-height: 40px;
+	padding: 0 5px;
+	color: #777;
+}
+.footer ul li a:hover {
+	text-decoration: underline;
+}
+ #sel {
+	float: right;
+	padding: 0 5px;
+	color: #666; 
+}
+select {
+	margin: 10px;
+}
+option {
+	padding: 1px 5px;
+	color: #666;
+}

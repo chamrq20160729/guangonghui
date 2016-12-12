@@ -205,10 +205,6 @@ option {
 	font-size: 20px;
 	line-height: 40px;
 }
-#payBox .aliPay,#payBox .tenPay{
-	width: 40%;
-	margin: 0 5px;
-}
 #payBox h2 {
 	height: 40px;
 	color: #666;
@@ -360,7 +356,7 @@ li > button:hover{
 	display: block;
 	width: 60%;
 	height: 40px;
-	margin: 0 auto;
+	margin: 0 auto 20px;
 	background: #ccc;
 	font-size: 16px;
 	border: 0;
