@@ -205,6 +205,10 @@ option {
 	font-size: 20px;
 	line-height: 40px;
 }
+#payBox .aliPay,#payBox .tenPay{
+	width: 40%;
+	margin: 0 5px;
+}
 #payBox h2 {
 	height: 40px;
 	color: #666;
@@ -236,6 +240,10 @@ option {
 }
 .otherPay a {
 	color: #aaa;
+}
+.payWrap{
+	width: 60%;
+	margin: 0 auto;
 }
 .aliPay {
 	float: left;
