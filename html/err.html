@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>错误提示</title>
+		<link rel="stylesheet" type="text/css" href="../css/common/font-awesome.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>
+	</head>
+	<body>
+		<h1 style="text-align: center;color: red;"><i class="fa fa-times" aria-hidden="true"></i>操作失败!</h1>
+		<h1 style="text-align: center;color: green;"><i class="fa fa-check" aria-hidden="true"></i>操作成功!</h1>
+		<p id="show"></p>
+		<script type="text/javascript">   
+			window.setInterval("CloseWebPage()",2000);  //设置的时间函数
+		    function CloseWebPage() {   
+		        if (navigator.userAgent.indexOf("MSIE") > 0) {   
+		            if (navigator.userAgent.indexOf("MSIE 6.0") > 0) {   
+		                window.opener = null; window.close();   
+		            }   
+		            else {   
+		                window.open('', '_top'); window.top.close();   
+		            }   
+		        }   
+		        else if (navigator.userAgent.indexOf("Firefox") > 0) {   
+		            window.location.href = 'about:blank '; //火狐默认状态非window.open的页面window.close是无效的  
+		            //window.history.go(-2);   
+		        }   
+		        else {   
+		            window.opener = null;    
+		            window.open('', '_self', '');   
+		            window.close();   
+		        }   
+		    }   
+		</script> 
+	</body>
+</html>

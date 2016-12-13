@@ -1,25 +1,25 @@
 
-/*弹窗&遮罩样式*/
-#mask{
-	position: absolute;
-	top: 0;
-	left: 0;
-	background: #000;
-	opacity: 0.3;
-	filter: alpha(opacity=30);
-}
 #tipBox{
-	position: fixed;
-	top:340px;
-	width: 360px;
-	height: 300px;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	width: 20%;
+	height: 280px;
+	padding: 10px;
+	transform: translate(-50%,-50%);
 	background: #fff;
+	border: 1px solid #ccc;
 	border-radius: 8px;
 	z-index: 999;
 }
+@media (max-width:768px ) {
+	#tipBox{
+		width: 60%;
+	}
+}
 #tipBox input{
 	display: block;
-	width: 300px;
+	width: 90%;
 	height: 40px;
 	margin: 15px auto 0;
 	padding-left: 20px;
@@ -73,6 +73,9 @@
 #close:hover{
 	color: red;
 	background: #eee;
+}
+#tipBox #login{
+	margin-top: 40px;
 }
 /*#tipBox p i{
 	margin-right: 15px;
