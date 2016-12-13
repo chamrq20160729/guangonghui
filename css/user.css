@@ -30,6 +30,9 @@
 	margin: 20px;
 	font-size: 20px;
 }
+.personalDate ul{
+	list-style: none;
+}
 #recharge{
 	margin-left: 10px;
 	padding:2 5px;

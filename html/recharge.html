@@ -74,8 +74,9 @@
 			<h2>快速充值</h2>
 			<div class="payMent">
 				<h3>充值活动：</h3>
-				<button class="tPay">首充100送1000优惠券</button>
+				<button>首充100送1000优惠券</button>
 				<button>充1000送1000余额</button>
+				<button>充3000送5000余额</button>
 			</div>
 			<form action="#" method="post">
 				<h3>不增加活动，自由充值：</h3>
@@ -129,9 +130,22 @@
 		<script type="text/javascript">
 			$(function(){
 				$(".payMent button").click(function(){
-					console.log("1");
-					$(".payMent button").removeClass("tPay");
-					$(this).addClass("tPay");
+					if($(this).attr("class") == "tPay"){
+						$(this).removeClass("tPay");
+					}
+					else{
+						$(".payMent button").removeClass("tPay")
+						$(this).addClass("tPay");
+						$("#monery").attr("disabled","disabled")
+					}
+					
+					if($(".payMent button:eq(0)").attr("class") !== "tPay"){
+						if($(".payMent button:eq(1)").attr("class") !== "tPay"){
+							if($(".payMent button:eq(2)").attr("class") !== "tPay"){
+								$("#monery").removeAttr("disabled")
+							}
+						}
+					}
 				})
 			})
 		</script>

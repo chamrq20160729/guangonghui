@@ -238,6 +238,20 @@ option {
 	background: #8d8;
 	box-shadow: 5px 5px 5px #5a5;
 }
+#payBox .payMent{
+	position: relative;
+}
+
+#payBox .payMent>h3{
+	position: absolute;
+	margin-top: 0;
+}
+@media (max-width: 480px ) {
+	#payBox .payMent>h3{
+		position: static;
+		margin-top: 0;
+	}
+}
 .otherPay {
 	width: 50%;
 	margin: 0 auto;
