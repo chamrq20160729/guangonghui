@@ -1,0 +1,35 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.personalDate{
+	width: 40%;
+	margin: 40px auto;
+}
+li{
+	
+	height: 30px;
+	padding: 20px;
+}
+input{
+	padding: 5px;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+span{
+	font-size: 18px;
+}
+button{
+	width: 100px;
+	height: 35px;
+	background: rgb(255,190,50);
+	font-size: 16px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+button:hover{
+	background: #ada;
+	cursor: pointer;
+}

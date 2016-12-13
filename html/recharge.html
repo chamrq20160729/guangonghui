@@ -72,7 +72,13 @@
 		</nav>
 		<div id="payBox">
 			<h2>快速充值</h2>
+			<div class="payMent">
+				<h3>充值活动：</h3>
+				<button class="tPay">首充100送1000优惠券</button>
+				<button>充1000送1000余额</button>
+			</div>
 			<form action="#" method="post">
+				<h3>不增加活动，自由充值：</h3>
 				<input type="text" name="money" id="monery" value="" placeholder="请输入充值金额"/>
 				<div class="payWrap clearfix">
 					<button class="aliPay" style="width: 45%;">支付宝充值</button>
@@ -120,6 +126,15 @@
 		</div>
 		<script src="../js/jquery-3.1.0.min.js"></script>
 		<script src="../js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(".payMent button").click(function(){
+					console.log("1");
+					$(".payMent button").removeClass("tPay");
+					$(this).addClass("tPay");
+				})
+			})
+		</script>
 	</body>
 </html>
 

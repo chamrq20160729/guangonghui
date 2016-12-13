@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>用户注册</title>
+		<title>云起用户注册</title>
 		<link rel="stylesheet" type="text/css" href="../css/common/font-awesome.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/index.css"/>
@@ -19,7 +19,7 @@
 					    <span class="icon-bar"></span>
 					    <span class="icon-bar"></span>
 					  </button>
-					<a class="navbar-brand" href="#">logo</a>
+					<a class="navbar-brand" href="#">云起</a>
 				</div>
 		
 		    <!-- Collect the nav links, forms, and other content for toggling -->
@@ -43,14 +43,14 @@
 					            <li>
 					            	<a href="#">系列3</a>
 					            </li>
-					            <li class="divider"></li>
+					            <!--<li class="divider"></li>
 					            <li>
 					            	<a href="#">限时大促</a>
 					            </li>
 					            <li class="divider"></li>
 					            <li>
 					            	<a href="#">所有产品</a>
-					            </li>
+					            </li>-->
 				            </ul>
 				        </li>
 			        </ul>
@@ -77,11 +77,20 @@
 				<span>已有账号？  请</span>
 				<a id="login2" href="#">登陆</a>
 			</div>
+			<div class="agr">
+				<h3>充值规则 :</h3>
+				<p><span>1:</span>首冲100，送1000折扣券和惠州博罗农场一日游，折扣券可抵扣消费额25%，折扣券不可兑换现金。</p>
+				<p><span>2:</span>充值1000，送1000账户余额，总共2000元分100天返还，即每天返还20元，账户余额可全额抵扣消费额，账户余额可提现，提现收取30%手续费。</p>
+				<p><span>3:</span>每个账户最多可以享受十次充1000送1000活动，当账户同时参与了十次活动时，后续充值将不再赠送余额，直至相关活动到期（即满一百天后），方可继续参加活动。</p>
+				<p><span>4:</span>推荐人推荐的客户充值或消费，推荐人可获的额外余额，余额为充值或消费金额的10%，多冲多送，不设上限！</p>
+				<p><span>5:</span>后续活动多多，优惠多多，欢迎继续关注！</p>
+				<p><span>6:</span>活动最终解释权归头脑风暴网络科技有限公司所有。</p>
+			</div>
 			<form>
 				<ul>
 					<li>
-						<label>用户名:</label>
-						<input type="text" name="userName" id="userName" value="" placeholder="您的账户名和登录名" />
+						<label>设置账号:</label>
+						<input type="text" name="userName" id="userName" value="" placeholder="您的登陆账号" />
 					</li>
 					<li>
 						<label>设置密码:</label>
@@ -90,6 +99,15 @@
 					<li>
 						<label>确定密码:</label>
 						<input type="password" name="radeay" id="radeay" value="" placeholder="请再次输入密码" /> 
+					</li>
+					<li>
+						<label>姓名:</label>
+						<input type="text" name="name" id="name" value="" placeholder="您的姓名" /> 
+						<label>性别:</label>
+						<span>男</span>
+						<input type="radio" name="radio" id="radio" value="" placeholder="" /> 
+						<span>女</span>
+						<input type="radio" name="radio" id="radio" value="" placeholder="" /> 
 					</li>
 					<li>
 						<label>邮箱:</label>
@@ -104,6 +122,10 @@
 						<input type="text" name="sfz" id="sfz" value="" placeholder="身份证号码" />
 					</li>
 					<li>
+						<label>推荐人:</label>
+						<input type="text" name="sfz" id="sfz" value="" placeholder="推荐人账号" />
+					</li>
+					<li>
 						<div class="verifyBox">
 							<input type="text" name="verify" id="verify" value="" placeholder="请输入验证码" />
 							<button>获取验证码</button>
@@ -112,12 +134,12 @@
 					<li>
 						<div class="agreenBox">
 							<input type="checkbox" name="agreen" id="agreen" value="" />
-							<span>我已阅读并同意</span>
-							<a href="#" id="protocol">《关公会用户注册协议》</a>
+							<span>我已阅读并同意上述规则</span>
+							<!--<a href="#" id="protocol">《云起用户注册协议》</a>-->
 						</div>
 					</li>
 					<li>
-						<button id="signin3">注册</button>
+						<input type="button" id="signin3" value="注册"/>
 					</li>
 				</ul>
 			</form>
@@ -126,21 +148,21 @@
 			<div class="container">
 				<div class="row">
 					<div class="left col-md-4 col-xs-12">
-						<span>创维集团有限公司版权所有</span>
-						<span>粤ICP备15057125号</span>
+						<span>头脑风暴有限公司版权所有</span>
+						<span>？？？？？？？？？？？？？？</span>
 					</div>
 					<div class="col-md-3 col-xs-12" id="sel">
 						<select>
 							<option value="#">集团成员网站 >></option>
-							<option value="#">创维盒子</option>
-							<option value="#">创维集团财务有限公司</option>
-							<option value="#">创维酷开社区</option>
-							<option value="#">创维液晶器件（深圳）有限公司</option>
-							<option value="#">创维淘宝旗舰店</option>
-							<option value="#">创维建设发展有限公司</option>
-							<option value="#">南京创维电器科技有限公司</option>
-							<option value="#">深圳市创维群欣安防科技股份有限公</option>
-							<option value="#">深圳创维数字技术有限公司</option>
+							<option value="#">头脑风暴</option>
+							<option value="#">头脑风暴</option>
+							<option value="#">头脑风暴</option>
+							<option value="#">头脑风暴</option>
+							<option value="#">头脑风暴</option>
+							<option value="#">头脑风暴</option>
+							<option value="#">头脑风暴</option>
+							<option value="#">头脑风暴</option>
+							<option value="#">头脑风暴</option>
 						</select>
 					</div>
 					<div class="right col-md-4 col-xs-12">
