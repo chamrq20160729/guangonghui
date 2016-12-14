@@ -2,8 +2,10 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<title>云起快速支付</title>
 		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/common/font-awesome.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/index.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/footer.css"/>
 	</head>
@@ -73,12 +75,34 @@
 		<div id="payBox">
 			<h2>快速支付</h2>
 			<form action="#" method="post">
-				
 				<input type="text" name="money" id="money" value="" placeholder="请输入支付金额"/>
-				<button id="pay">余额快速支付</button>
+				<div class="discountCoupon">
+					<p>
+						<span>请选择交易商户：</span>
+						<select>
+							<option value="#">点击选择商店>></option>
+							<option value="#">关公会</option>
+							<option value="#">天下厨仓超市</option>
+							<option value="#">农场</option>
+							<option value="#">汽车店</option>
+							<option value="#">酒店</option>
+							<option value="#">？？？</option>
+							<option value="#">？？？</option>
+							<option value="#">？？？</option>
+							<option value="#">？？？</option>
+						</select>
+					</p>
+					<p>
+						<span>折扣券抵现金</span>
+						<span>XXX元</span>，
+						<span>实际支付现金</span>
+						<span>XXX元</span>
+					</p>
+				</div>
+				<input type="button" value="余额快速支付" id="pay" class="payButton">
 				<div class="otherPay clearfix">
-					<a class="aliPay" href="#">支付宝支付</a>
-					<a class="tenPay" href="#">微信支付</a>
+					<a class="aliPay payButton" href="#">支付宝支付</a>
+					<a class="tenPay payButton" href="#">微信支付</a>
 				</div>
 				<!--<input type="password" name="paypassword" id="payPassWord" value="" placeholder="请输入支付密码"/>-->
 			</form>
@@ -120,8 +144,49 @@
 				</div>
 			</div>
 		</div>
+		<script src="../js/jquery-3.1.0.min.js"></script>
+		<script src="../js/bootstrap.min.js"></script>	
+		<script type="text/javascript">
+			function getId(id){
+				return typeof id == "string" ? document.getElementById(id) : id;
+			}
+			getId(pay).onclick = function(){
+				//页面高度和宽度
+				var sHeight = document.documentElement.scrollHeight;
+				var sWidth = document.documentElement.scrollWidth;
+				//可视区域高度和宽度
+				var wHeight = document.documentElement.clientHeight;
+				var wWidth = document.documentElement.clientWidth;
+				//创建遮罩
+				var oMask = document.createElement("div");
+				oMask.id = "mask";
+				oMask.style.height = sHeight + "px";
+				oMask.style.width = sWidth + "px";
+				document.body.appendChild(oMask);
+				
+				var oTipbox = document.createElement("div");
+				oTipbox.id = "tipBox";
+				oTipbox.innerHTML = "<h2>确定订单</h2>"+
+				"<p id='sup'><span>消费商店：</span><span>天下厨仓超市</span></p>"+
+				"<p id='sup'><span>订单金额：</span><span>XXX元</span></p>"+
+				"<p id='sup'><span>现金券抵扣：</span><span>XXX元</span></p>"+
+				"<p id='sup'><span>实际支付：</span><span>XXX元</span></p>"+
+				"<from action='#' method='post' name='login'><input type='button' value='确定支付' id='login'/>"+
+				"<span id='close'><i class='fa fa-times' aria-hidden='true'></i></span></from>";
+				document.body.appendChild(oTipbox);
+				//获取oTipbox的宽高,通用的居中方式，不过这里所有尺寸以PSD设计稿为准，故高度位置由CSS直接设置
+				var dHeight = oTipbox.offsetHeight;
+				var dWidth = oTipbox.offsetWidth;
+				oTipbox.style.left = (wWidth - dWidth)/2 + "px";
+				oTipbox.style.top = (wHeight - dHeight)/2 + "px"
+			    //关闭弹窗
+				var oclose = document.getElementById("close");
+				oclose.onclick = function(){
+					document.body.removeChild(oMask);
+					document.body.removeChild(oTipbox);
+				};
+			}
+		</script>
 	</body>
-	<script src="../js/jquery-3.1.0.min.js"></script>
-	<script src="../js/bootstrap.min.js"></script>	
 </html>
 

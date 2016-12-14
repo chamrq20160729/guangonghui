@@ -221,6 +221,47 @@ option {
 	border: 1px solid #ccc;
 	border-radius: 8px;
 }
+#payBox select{
+	height: 36px;
+	font-size: 16px;
+}
+#payBox option{
+	font-size: 14px;
+}
+#payBox p{
+	width: 55%;
+	margin: 0 auto;
+}
+#payBox p input{
+	display: inline;
+}
+#payBox p span{
+	font-size: 1.4em;
+}
+#payBox #pay{
+	width: 50%;
+	color: #fff;
+	margin-bottom: 10px;
+	background: rgb(255, 190, 50);
+	font-size: 20px;
+	border: 0;
+	border-radius: 8px;
+	cursor: pointer;
+}
+#payBox #pay:hover{
+	background: #8d8;
+}
+#payBox > a{
+	display: inline-block;
+	padding: 5px 10px;
+	color: black;
+	background: #ccc;
+	font-size: 18px;
+	border-radius: 4px;
+}
+#payBox > a:hover{
+	background: #ddd;
+}
 #payBox button {
 	width: 50%;
 	color: #fff;
@@ -231,7 +272,11 @@ option {
 	border-radius: 8px;
 	cursor: pointer;
 }
-#payBox .payWrap button:hover {
+#payBox .payWrap input{
+	color: #fff;
+	background: rgb(255, 190, 50);
+}
+#payBox .payWrap input:hover {
 	background: #8d8;
 }
 #payBox .payMent .tPay{
@@ -269,6 +314,70 @@ option {
 .tenPay {
 	float: right;
 }
+/*支付界面弹窗*/
+
+#tipBox{
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	width: 20%;
+	padding: 10px;
+	transform: translate(-50%,-50%);
+	background: #fff;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	z-index: 999;
+}
+@media (max-width:768px ) {
+	#tipBox{
+		width: 60%;
+	}
+}
+#tipBox h2{
+	text-align: center;
+}
+#login{
+	width: 150px;
+	height: 50px;
+	margin: 20px 105px;
+	color: #fff;
+	background: rgb(255,190,50);
+	font-size: 20px;
+	border: 0;
+	border-radius: 8px;
+	cursor: pointer;
+}
+#login:hover{
+	background: #8d8;
+}
+#tipBox p{
+	margin:15px auto 0;
+	text-align: center;
+	font-size: 20px;
+}
+#tipBox p span{
+	font-size: 18px;
+}
+#tipBox p span:last-child{
+	color: red;
+}
+#close{
+	position: absolute;
+	top: 1px;
+	right: 1px;
+	width: 25px;
+	height: 25px;
+	background: #fff;
+	border: 0;
+	border-radius: 4px;
+	font-size: 20px;
+	line-height: 20px;
+}
+#close:hover{
+	color: red;
+	background: #eee;
+}
+
 
 /*注册界面*/
 
@@ -276,6 +385,9 @@ option {
 #signinBox{
 	width: 600px;
 	margin: 50px auto 0;
+}
+#signinBox .agr p,#signinBox .agr span{
+	font-size: 16px;
 }
 #signinBox > h2{
 	margin-bottom: 10px;
