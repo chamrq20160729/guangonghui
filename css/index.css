@@ -223,14 +223,21 @@ option {
 }
 #payBox select{
 	height: 36px;
+	color: red;
 	font-size: 16px;
+	border: 1px solid #aaa;
+	border-radius: 4px;
 }
 #payBox option{
+	color: red;
 	font-size: 14px;
 }
 #payBox p{
 	width: 55%;
 	margin: 0 auto;
+}
+.monery{
+	color: red;
 }
 #payBox p input{
 	display: inline;
@@ -314,8 +321,14 @@ option {
 .tenPay {
 	float: right;
 }
-/*支付界面弹窗*/
+/*支付界面////弹窗*/
 
+#mask{
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: rgba(0,0,0,0.5);
+}
 #tipBox{
 	position: absolute;
 	top: 40%;
@@ -376,9 +389,8 @@ option {
 #close:hover{
 	color: red;
 	background: #eee;
+	cursor: pointer;
 }
-
-
 /*注册界面*/
 
 /*//////////////////////////////////////////////////////////////////////*/

@@ -80,24 +80,21 @@
 					<p>
 						<span>请选择交易商户：</span>
 						<select>
-							<option value="#">点击选择商店>></option>
-							<option value="#">关公会</option>
-							<option value="#">天下厨仓超市</option>
-							<option value="#">农场</option>
-							<option value="#">汽车店</option>
-							<option value="#">酒店</option>
-							<option value="#">？？？</option>
-							<option value="#">？？？</option>
-							<option value="#">？？？</option>
-							<option value="#">？？？</option>
+							<option value="0">点击选择商店>></option>
+							<option value="1">关公会</option>
+							<option value="2">天下厨仓超市</option>
+							<option value="3">农场</option>
+							<option value="4">汽车店</option>
+							<option value="5">酒店</option>
+							<option value="6">餐厅</option>
 						</select>
 					</p>
-					<p>
+					<!--<p>
 						<span>折扣券抵现金</span>
-						<span>XXX元</span>，
+						<span class="monery">XXX元</span>，
 						<span>实际支付现金</span>
-						<span>XXX元</span>
-					</p>
+						<span class="monery">XXX元</span>
+					</p>-->
 				</div>
 				<input type="button" value="余额快速支付" id="pay" class="payButton">
 				<div class="otherPay clearfix">
@@ -164,28 +161,45 @@
 				oMask.style.width = sWidth + "px";
 				document.body.appendChild(oMask);
 				
-				var oTipbox = document.createElement("div");
-				oTipbox.id = "tipBox";
-				oTipbox.innerHTML = "<h2>确定订单</h2>"+
-				"<p id='sup'><span>消费商店：</span><span>天下厨仓超市</span></p>"+
-				"<p id='sup'><span>订单金额：</span><span>XXX元</span></p>"+
-				"<p id='sup'><span>现金券抵扣：</span><span>XXX元</span></p>"+
-				"<p id='sup'><span>实际支付：</span><span>XXX元</span></p>"+
+				
+				var oTipBox = document.createElement("div");
+				oTipBox.id = "tipBox";
+				oTipBox.innerHTML = "<h2>确定订单</h2>"+
+				"<p><span>消费商店：</span><span id='stor'>天下厨仓超市</span></p>"+
+				"<p><span>订单金额：</span><span>XXX元</span></p>"+
+				"<p><span>现金券抵扣：</span><span>XXX元</span></p>"+
+				"<p><span>实际支付：</span><span>XXX元</span></p>"+
 				"<from action='#' method='post' name='login'><input type='button' value='确定支付' id='login'/>"+
 				"<span id='close'><i class='fa fa-times' aria-hidden='true'></i></span></from>";
-				document.body.appendChild(oTipbox);
+				document.body.appendChild(oTipBox);
 				//获取oTipbox的宽高,通用的居中方式，不过这里所有尺寸以PSD设计稿为准，故高度位置由CSS直接设置
-				var dHeight = oTipbox.offsetHeight;
-				var dWidth = oTipbox.offsetWidth;
-				oTipbox.style.left = (wWidth - dWidth)/2 + "px";
-				oTipbox.style.top = (wHeight - dHeight)/2 + "px"
+				var dHeight = oTipBox.offsetHeight;
+				var dWidth = oTipBox.offsetWidth;
+				oTipBox.style.left = (wWidth - dWidth)/2 + "px";
+				oTipBox.style.top = (wHeight - dHeight)/2 + "px"
 			    //关闭弹窗
 				var oclose = document.getElementById("close");
 				oclose.onclick = function(){
 					document.body.removeChild(oMask);
-					document.body.removeChild(oTipbox);
+					document.body.removeChild(oTipBox);
 				};
 			}
+		</script>
+		<script type="text/javascript">
+			$("#pay").click(function(){
+				var oOption = $(".discountCoupon option");
+				var sele = $(".discountCoupon select");
+				var oValue = sele.val();
+				var stor = $(oOption.eq(sele.val())).html();
+				if(oValue == 0){
+					$("#mask").remove();
+					$("#tipBox").remove()
+					alert("请选择交易商户！")
+				}
+				else{
+					$("#stor").html(stor)
+				}
+			})
 		</script>
 	</body>
 </html>
