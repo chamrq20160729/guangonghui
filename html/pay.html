@@ -75,7 +75,7 @@
 		<div id="payBox">
 			<h2>快速支付</h2>
 			<form action="#" method="post">
-				<input type="text" name="money" id="money" value="" placeholder="请输入支付金额"/>
+				<input type="tel" name="money" id="money" value="" placeholder="请输入支付金额"/>
 				<div class="discountCoupon">
 					<p>
 						<span>请选择交易商户：</span>
@@ -166,11 +166,11 @@
 				oTipBox.id = "tipBox";
 				oTipBox.innerHTML = "<h2>确定订单</h2>"+
 				"<p><span>消费商店：</span><span id='stor'>天下厨仓超市</span></p>"+
-				"<p><span>订单金额：</span><span>XXX元</span></p>"+
+				"<p><span>订单金额：</span><span id='accountMoney'>XXX元</span></p>"+
 				"<p><span>现金券抵扣：</span><span>XXX元</span></p>"+
 				"<p><span>实际支付：</span><span>XXX元</span></p>"+
-				"<from action='#' method='post' name='login'><input type='button' value='确定支付' id='login'/>"+
-				"<span id='close'><i class='fa fa-times' aria-hidden='true'></i></span></from>";
+				"<form action='#' method='post' name='login'><input type='button' value='确定支付' id='login'/>"+
+				"<span id='close'><i class='fa fa-times' aria-hidden='true'></i></span></form>";
 				document.body.appendChild(oTipBox);
 				//获取oTipbox的宽高,通用的居中方式，不过这里所有尺寸以PSD设计稿为准，故高度位置由CSS直接设置
 				var dHeight = oTipBox.offsetHeight;
@@ -191,6 +191,8 @@
 				var sele = $(".discountCoupon select");
 				var oValue = sele.val();
 				var stor = $(oOption.eq(sele.val())).html();
+//				var oAccMoney = $("#accountMoney")
+				var oMoney = $("#money").val()
 				if(oValue == 0){
 					$("#mask").remove();
 					$("#tipBox").remove()
@@ -198,6 +200,7 @@
 				}
 				else{
 					$("#stor").html(stor)
+					$("#accountMoney").html(oMoney + "元")
 				}
 			})
 		</script>

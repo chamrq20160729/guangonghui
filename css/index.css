@@ -331,11 +331,8 @@ option {
 }
 #tipBox{
 	position: absolute;
-	top: 40%;
-	left: 50%;
 	width: 20%;
 	padding: 10px;
-	transform: translate(-50%,-50%);
 	background: #fff;
 	border: 1px solid #ccc;
 	border-radius: 8px;
@@ -350,9 +347,10 @@ option {
 	text-align: center;
 }
 #login{
-	width: 150px;
+	display: block;
+	width: 80%;
+	margin: 0 auto;
 	height: 50px;
-	margin: 20px 105px;
 	color: #fff;
 	background: rgb(255,190,50);
 	font-size: 20px;
@@ -454,7 +452,6 @@ option {
 	cursor: pointer;
 }
 .agreenBox{
-
 	margin: 10px auto 10px 22%;
 }
 li > button{
