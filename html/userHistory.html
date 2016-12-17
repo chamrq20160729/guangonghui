@@ -9,12 +9,24 @@
 				padding: 0;
 				text-align: center;
 			}
+			body{
+				min-width: 950px;
+			}
 			h2{
-				min-width: 1000px;
 				margin-top: 20px;
 			}
+			h3 a{
+				display: inline-block;
+				padding: 10px;
+				color: #444;
+				background: #ddd;
+				border-radius: 4px;
+				text-decoration: none;
+			}
+			h3 a:hover{
+				background: #ccc;
+			}
 			table{
-				min-width: 1000px;
 				margin: 10px auto;
 				border: 1px solid;
 			}
@@ -32,10 +44,45 @@
 				padding: 5px 15px;
 				border-right: 1px solid #aaa;
 			}
+			ul{
+				display: inline-block;
+				height: 70px;
+				margin-top: 50px;
+				background: #ccc;
+				border: 1px solid #ccc;
+				border-radius: 8px;
+			}
+			li{
+				float: left;;
+				height: 50px;
+				padding: 10px;
+				color: #444;
+				font-size: 30px;
+				font-weight: 700;
+				list-style: none;
+			}
+			div{
+				display: none;
+			}
+			.show{
+				display: block;
+			}
+			.showList{
+				color: #fff;
+				background: #4aa;
+				border-radius: 8px;
+			}
 		</style>
 	</head>
 	<body>
-		<div class="payHistory">
+		<ul>
+			<li class="showList">消费历史记录</li>
+			<li>充值历史记录</li>
+		</ul>
+		<h3>
+			<a href="#">返回上一页</a>
+		</h3>
+		<div id="payHistory"  class="show">
 			<h2>消费历史记录</h2>
 			<table border="0" cellspacing="0" cellpadding="0">
 				<tr>
@@ -46,7 +93,6 @@
 					<th>订单金额（元）</th>
 					<th>折扣金额（元）</th>
 					<th>实付金额（元）</th>
-					<th>备注</th>
 				</tr>
 				<tr>
 					<td>123456789</td>
@@ -56,7 +102,6 @@
 					<td>8888.00</td>
 					<td>1000.00</td>
 					<td>7800.00</td>
-					<td></td>
 				</tr>
 				<tr>
 					<td>123456789</td>
@@ -66,7 +111,6 @@
 					<td>8888.00</td>
 					<td>1000.00</td>
 					<td>7800.00</td>
-					<td></td>
 				</tr>
 				<tr>
 					<td>123456789</td>
@@ -76,11 +120,10 @@
 					<td>8888.00</td>
 					<td>1000.00</td>
 					<td>7800.00</td>
-					<td></td>
 				</tr>
 			</table>
 		</div>
-		<div class="accHistory">
+		<div id="accHistory">
 			<h2>充值历史记录</h2>
 			<table border="0" cellspacing="0" cellpadding="0">
 				<tr>
@@ -88,37 +131,43 @@
 					<th>支付方式</th>
 					<th>支付时间</th>
 					<th>订单金额（元）</th>
-					<th>备注</th>
 				</tr>
 				<tr>
 					<td>987654321</td>
 					<td>支付宝</td>
 					<td>20181218 17：30</td>
 					<td>3000.00</td>
-					<td></td>
 				</tr>
 				<tr>
 					<td>987654321</td>
 					<td>支付宝</td>
 					<td>20181218 17：30</td>
 					<td>3000.00</td>
-					<td></td>
 				</tr>
 				<tr>
 					<td>987654321</td>
 					<td>支付宝</td>
 					<td>20181218 17：30</td>
 					<td>3000.00</td>
-					<td></td>
 				</tr>
 				<tr>
 					<td>987654321</td>
 					<td>支付宝</td>
 					<td>20181218 17：30</td>
 					<td>3000.00</td>
-					<td></td>
 				</tr>
 			</table>
 		</div>
+		<script src="../js/jquery-3.1.0.min.js"></script>
+		<script type="text/javascript">
+			$("li").click(function(){
+				var oIndex = $(this).index();
+				$("li").removeClass("showList");
+				$("div").removeClass("show");
+				console.log(oIndex);
+				$("div").eq(oIndex).addClass("show");
+				$(this).addClass("showList");
+			});
+		</script>
 	</body>
 </html>

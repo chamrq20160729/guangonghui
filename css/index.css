@@ -134,15 +134,6 @@
 	-o-box-shadow: 10px 10px 8px #888;
 }
 
-/*@media (min-width:768px ) {
-	.friendsLink1 a{
-		float: right;
-	}
-	.friendsLink2 a{
-		float: left;
-	}
-}*/
-
 /*footer*/
 .footer {
 	height: 40px;
@@ -215,11 +206,16 @@ option {
 	text-align: center;
 }
 #payBox input {
-	width: 60%;
+	width: 50%;
 	padding: 0 5%;
 	color: #aaa;
 	border: 1px solid #ccc;
 	border-radius: 8px;
+}
+@media (max-width:480px ) {
+	#payBox input[type="button"]{
+		width: 100%;
+	}
 }
 #payBox select{
 	height: 36px;
@@ -321,6 +317,21 @@ option {
 .tenPay {
 	float: right;
 }
+.back{
+	display: inline-block;
+	margin: 10px 25% 0;
+	padding: 10px;
+	background: #ddd;
+	text-align: center;
+	font-size: 16px;
+	border-radius: 4px;
+	color: #444;
+	
+}
+.back:hover{
+	background: #ccc;
+}
+
 /*支付界面////弹窗*/
 
 #mask{
@@ -428,6 +439,11 @@ option {
 	font-size: 16px;
 	border: 1px solid #ccc;
 	border-radius: 4px;
+}
+#signinBox li .star{
+	color: red;
+	font-size: 20px;
+	font-weight: 700;
 }
 .verifyBox input{
 	width: 20%;

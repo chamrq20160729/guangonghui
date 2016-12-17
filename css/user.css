@@ -30,12 +30,19 @@
 	margin: 20px;
 	font-size: 20px;
 }
-.personalDate a{
+.personalDate .change{
 	display: inline-block;
 	width: 60px;
 	background: #ddd;
 	font-size: 18px;
 	text-align: center;
+	border-radius: 4px;
+}
+.personalDate .history{
+	background: #ddd;
+	height: 40px; 
+	padding: 10px;
+	line-height: 40px;
 	border-radius: 4px;
 }
 .personalDate a:hover{
@@ -58,6 +65,7 @@
 }
 #userTab li > a{
 	display: inline-block;
+	margin: 5px;
 	padding: 10px 60px;
 	color: red;
 	background: rgb(235, 235, 50);

@@ -3,8 +3,9 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-		<title>快速充值</title>
+		<title>云起快速支付</title>
 		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/common/font-awesome.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/index.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/footer.css"/>
 	</head>
@@ -19,7 +20,7 @@
 					    <span class="icon-bar"></span>
 					    <span class="icon-bar"></span>
 					  </button>
-					<a class="navbar-brand" href="#">logo</a>
+					<a class="navbar-brand" href="#">云起</a>
 				</div>
 		
 		    <!-- Collect the nav links, forms, and other content for toggling -->
@@ -72,44 +73,44 @@
 		    </div>
 		</nav>
 		<div id="payBox">
-			<h2>快速充值</h2>
-			<div class="payMent">
-				<h3>充值活动：</h3>
-				<button>首充100送1000优惠券</button>
-				<button>充1000送1000余额</button>
-				<button>充3000送5000余额</button>
-			</div>
+			<h2>使用优惠券</h2>
 			<form action="#" method="post">
-				<h3>不增加活动，自由充值：</h3>
-				<input type="text" name="money" id="monery" value="" placeholder="请输入充值金额"/>
-				<div class="payWrap clearfix">
-					<input type="button" value="支付宝充值" class="aliPay"/>
-					<input type="button" value="微信充值" class="tenPay"/>
+				<div class="discountCoupon">
+					<p>
+						<span>请选择优惠券：</span>
+						<select>
+							<option value="0">点击选择优惠券>></option>
+							<option value="1">偷鸡</option>
+							<option value="2">摸狗</option>
+							<option value="3">洗脚</option>
+							<option value="4">泡妞</option>
+						</select>
+					</p>
 				</div>
+				<input type="button" value="使用" id="pay" class="payButton">
+				<a class="back" href="#">返回</a>
 				<!--<input type="password" name="paypassword" id="payPassWord" value="" placeholder="请输入支付密码"/>-->
 			</form>
-			<p>Tips：充值过程中请不要关闭浏览器</p>
-			<a href="#">返回</a>
 		</div>
 		<div class="footer">
 			<div class="container">
 				<div class="row">
 					<div class="left col-md-4 col-xs-12">
-						<span>创维集团有限公司版权所有</span>
-						<span>粤ICP备15057125号</span>
+						<span>头脑风暴网络科技有限公司版权所有</span>
+						<!--<span>粤ICP备15057125号</span>-->
 					</div>
 					<div class="col-md-3 col-xs-12" id="sel">
 						<select>
 							<option value="#">集团成员网站 >></option>
-							<option value="#">创维盒子</option>
-							<option value="#">创维集团财务有限公司</option>
-							<option value="#">创维酷开社区</option>
-							<option value="#">创维液晶器件（深圳）有限公司</option>
-							<option value="#">创维淘宝旗舰店</option>
-							<option value="#">创维建设发展有限公司</option>
-							<option value="#">南京创维电器科技有限公司</option>
-							<option value="#">深圳市创维群欣安防科技股份有限公</option>
-							<option value="#">深圳创维数字技术有限公司</option>
+							<option value="#">头脑风暴</option>
+							<option value="#">头脑风暴</option>
+							<option value="#">头脑风暴</option>
+							<option value="#">头脑风暴</option>
+							<option value="#">头脑风暴</option>
+							<option value="#">头脑风暴</option>
+							<option value="#">头脑风暴</option>
+							<option value="#">头脑风暴</option>
+							<option value="#">头脑风暴</option>
 						</select>
 					</div>
 					<div class="right col-md-4 col-xs-12">
@@ -129,27 +130,63 @@
 			</div>
 		</div>
 		<script src="../js/jquery-3.1.0.min.js"></script>
-		<script src="../js/bootstrap.min.js"></script>
+		<script src="../js/bootstrap.min.js"></script>	
 		<script type="text/javascript">
-			$(function(){
-				$(".payMent button").click(function(){
-					if($(this).attr("class") == "tPay"){
-						$(this).removeClass("tPay");
-					}
-					else{
-						$(".payMent button").removeClass("tPay")
-						$(this).addClass("tPay");
-						$("#monery").attr("disabled","disabled")
-					}
-					
-					if($(".payMent button:eq(0)").attr("class") !== "tPay"){
-						if($(".payMent button:eq(1)").attr("class") !== "tPay"){
-							if($(".payMent button:eq(2)").attr("class") !== "tPay"){
-								$("#monery").removeAttr("disabled")
-							}
-						}
-					}
-				})
+			function getId(id){
+				return typeof id == "string" ? document.getElementById(id) : id;
+			}
+			getId(pay).onclick = function(){
+				//页面高度和宽度
+				var sHeight = document.documentElement.scrollHeight;
+				var sWidth = document.documentElement.scrollWidth;
+				//可视区域高度和宽度
+				var wHeight = document.documentElement.clientHeight;
+				var wWidth = document.documentElement.clientWidth;
+				//创建遮罩
+				var oMask = document.createElement("div");
+				oMask.id = "mask";
+				oMask.style.height = sHeight + "px";
+				oMask.style.width = sWidth + "px";
+				document.body.appendChild(oMask);
+				
+				
+				var oTipBox = document.createElement("div");
+				oTipBox.id = "tipBox";
+				oTipBox.innerHTML = "<h2>确定订单</h2>"+
+				"<p><span>即将使用优惠券：</span><span id='stor'>天下厨仓超市</span></p>"+
+				"<form action='#' method='post' name='login'><input type='button' value='确定使用' id='login'/>"+
+				"<span id='close'><i class='fa fa-times' aria-hidden='true'></i></span></form>";
+				document.body.appendChild(oTipBox);
+				//获取oTipbox的宽高,通用的居中方式，不过这里所有尺寸以PSD设计稿为准，故高度位置由CSS直接设置
+				var dHeight = oTipBox.offsetHeight;
+				var dWidth = oTipBox.offsetWidth;
+				oTipBox.style.left = (wWidth - dWidth)/2 + "px";
+				oTipBox.style.top = (wHeight - dHeight)/3 + "px"
+			    //关闭弹窗
+				var oclose = document.getElementById("close");
+				oclose.onclick = function(){
+					document.body.removeChild(oMask);
+					document.body.removeChild(oTipBox);
+				};
+			}
+		</script>
+		<script type="text/javascript">
+			$("#pay").click(function(){
+				var oOption = $(".discountCoupon option");
+				var sele = $(".discountCoupon select");
+				var oValue = sele.val();
+				var stor = $(oOption.eq(sele.val())).html();
+//				var oAccMoney = $("#accountMoney")
+				var oMoney = $("#money").val()
+				if(oValue == 0){
+					$("#mask").remove();
+					$("#tipBox").remove()
+					alert("请选择交易商户！")
+				}
+				else{
+					$("#stor").html(stor)
+					$("#accountMoney").html(oMoney + "元")
+				}
 			})
 		</script>
 	</body>

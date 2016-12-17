@@ -12,9 +12,13 @@
 	border-radius: 8px;
 	z-index: 999;
 }
+/*兼容UC手机浏览器*/
 @media (max-width:768px ) {
 	#tipBox{
-		width: 60%;
+		position: initial;
+		width: 360px;
+		margin: 0 auto;
+		transform: none;
 	}
 }
 #tipBox input{
