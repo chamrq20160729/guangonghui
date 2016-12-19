@@ -7,7 +7,9 @@
 }
 #userTab{
 	width: 60%;
+	min-width: 360px;
 	margin: 0 auto;
+}
 }
 #userTab > ul > li{
 	display: none;
@@ -27,26 +29,27 @@
 	color: #262
 }
 .personalDate p{
-	margin: 20px;
+	margin: 20px 10px;
 	font-size: 20px;
 }
 .personalDate .change{
 	display: inline-block;
 	width: 60px;
-	background: #ddd;
+	background: #ada;
 	font-size: 18px;
 	text-align: center;
 	border-radius: 4px;
 }
 .personalDate .history{
-	background: #ddd;
+	background: #ada;
 	height: 40px; 
 	padding: 10px;
 	line-height: 40px;
 	border-radius: 4px;
 }
+
 .personalDate a:hover{
-	background: #ccc;
+	background: #aad;
 }
 .personalDate ul{
 	list-style: none;
@@ -65,10 +68,13 @@
 }
 #userTab li > a{
 	display: inline-block;
+	width: 15%;
+	min-width: 150px;
 	margin: 5px;
-	padding: 10px 60px;
+	padding: 10px;
 	color: red;
 	background: rgb(235, 235, 50);
+	text-align: center;
 	font-size: 26px;
 	font-weight: 700;
 	border-radius: 4px;
