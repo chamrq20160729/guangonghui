@@ -72,15 +72,16 @@
 	min-width: 150px;
 	margin: 5px;
 	padding: 10px;
-	color: red;
-	background: rgb(235, 235, 50);
+	color: #fff;
+	
+	background: #2a2;
 	text-align: center;
 	font-size: 26px;
 	font-weight: 700;
 	border-radius: 4px;
 }
 #userTab li > a:hover{
-	background: #8d8;
+	background: #88d;
 }
 /*订单管理*/
 .orderTab li{
