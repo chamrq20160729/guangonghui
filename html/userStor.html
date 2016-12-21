@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta charset="UTF-8">
+		<title>用户操作 </title>
+		<style type="text/css">
+			*{
+				font-size: 30px;
+			}
+			#radio{
+				position: relative;
+				top: 2px;
+				width: 20px;
+				margin-right: 30px;
+			}
+			.personalDate{
+				width: 40%;
+				margin: 0 auto;
+			}
+			.color{
+				color: red;
+			}
+			p,form div,h1{
+				margin: 30px;
+			}
+			input{
+				padding: 10px 20px;
+				border: 1px solid #ccc;
+				border-radius: 8px;
+			}
+			input[type="submit"]{
+				display:block;
+				width: 20%;
+				margin-left: 25%;
+				background: #1a1;
+				border: 0;
+				border-radius: 4px;
+			}
+			input[type="submit"]:hover{
+				background: #5e5;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="personalDate">
+			<h1>云起会员信息</h1>
+			<p>
+				<span>会员账号:</span>
+				<span class="color">XXX</span>
+			</p>
+			<p>
+				<span>余额:</span>
+				<span class="color">88888888.00元</span>
+			</p >
+			<p>
+				<span>折扣券:</span>
+				<span class="color">999.00元</span>
+			</p >
+			<form>
+				<div class="payMuch">
+					<label>支付金额：</label>
+					<input type="text" name="pay" id="pay" value="" placeholder="请输入支付金额"/>
+				</div>
+				<div class="payWay">
+					<label>支付方式：</label>
+					<span>余额支付</span>
+					<input type="radio" name="radio" id="radio" value="" placeholder="" /> 
+					<span>现金支付</span>
+					<input type="radio" name="radio" id="radio" value="" placeholder="" /> 
+				</div>
+				<input type="submit" name="sub" id="sub" value="提交" />
+			</form>
+		</div>
+	</body>
+</html>

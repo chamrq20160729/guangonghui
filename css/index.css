@@ -400,6 +400,15 @@ option {
 	background: #eee;
 	cursor: pointer;
 }
+#zhifubao{
+	display: block;
+	width: 80%;
+	margin: 20px auto;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: large;
+}
 /*注册界面*/
 
 /*//////////////////////////////////////////////////////////////////////*/

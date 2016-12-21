@@ -6,90 +6,16 @@
 		<title>用户中心 </title>
 		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/user.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/common/font-awesome.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/footer.css"/>
 	</head>
 	<body>
-		<nav class="navbar navbar-default changeColor" role="navigation">
-			<div class="container-fluid"> 
-			    <!-- Brand and toggle get grouped for better mobile display -->
-			    <div class="navbar-header">
-			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-			        <span class="sr-only">Toggle navigation</span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			      </button>
-			      <a class="navbar-brand" href="index.html">云起</a>
-			    </div>
-			
-			    <!-- Collect the nav links, forms, and other content for toggling -->
-			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			        <ul class="nav navbar-nav">
-				        <li>
-				        	<a href="#">公告</a>
-				        </li>
-				        <li>
-				        	<a href="#">会员系统</a>
-				        </li>
-				        <li class="dropdown">
-				            <a href="#" class="dropdown-toggle" data-toggle="dropdown">产品系列<span class="caret"></span></a>
-				            <ul class="dropdown-menu" role="menu">
-					            <li>
-					            	<a href="#">系列1</a>
-					            </li>
-					            <li>
-					            	<a href="#">系列2</a>
-					            </li>
-					            <li>
-					            	<a href="#">系列3</a>
-					            </li>
-					            <li class="divider"></li>
-					            <li>
-					            	<a href="#">限时大促</a>
-					            </li>
-					            <li class="divider"></li>
-					            <li>
-					            	<a href="#">所有产品</a>
-					            </li>
-				            </ul>
-				        </li>
-			        </ul>
-			        <form class="navbar-form navbar-left" role="search">
-				        <div class="form-group">
-				          <input type="text" class="form-control" placeholder="请输入关键字">
-				        </div>
-				        <button type="submit" class="btn btn-default">搜索</button>
-				    </form>
-			        <ul class="nav navbar-nav navbar-right">
-			        	<li>
-			        		<p>
-			        			<span>XXX</span>
-			        			<span>欢迎!</span>
-				        		<a href="#">退出</a>
-				        	</p>
-				        </li>
-				        <li>
-				        	<a id="" href="#">基本信息</a>
-				        </li>
-				        <li>
-				            <a href="#">订单管理</a>
-				        </li>
-				        <li>
-				          	<a href="#">收货地址</a>
-				        </li>
-				        <li>
-				         	 <a href="#">我的收藏</a>
-				        </li>
-			        </ul>
-			    </div>
-		    </div>
-		</nav>	
-		
 		<div id="userTab">
 			<ul class="list-unstyled clearfix">
 				<li class="show">
 					<h3>个人资料:</h3>
-					<a href="#">付款</a>
+					<a href="#" id="pay">付款</a>
+					<a href="#" id="withdrawDeposit">提现</a>
 					<a href="#">活动券</a>
 					<div class="personalDate">
 						<p class="welcome">
@@ -113,7 +39,7 @@
 							<span id="balance">999.00元</span>
 						</p >
 						<p>
-							<a href="#" class="history">交易历史记录</a>
+							<a href="#" class="history">活动记录</a> 
 						</p>
 						<p>
 							<span>注册邮箱:</span>
@@ -436,45 +362,49 @@
 				</li>
 			</ul>
 		</div>
-		<div class="footer">
-			<div class="container">
-				<div class="row">
-					<div class="left col-md-4 col-xs-12">
-						<span>创维集团有限公司版权所有</span>
-						<span>粤ICP备15057125号</span>
-					</div>
-					<div class="col-md-3 col-xs-12" id="sel">
-						<select>
-							<option value="#">集团成员网站 >></option>
-							<option value="#">创维盒子</option>
-							<option value="#">创维集团财务有限公司</option>
-							<option value="#">创维酷开社区</option>
-							<option value="#">创维液晶器件（深圳）有限公司</option>
-							<option value="#">创维淘宝旗舰店</option>
-							<option value="#">创维建设发展有限公司</option>
-							<option value="#">南京创维电器科技有限公司</option>
-							<option value="#">深圳市创维群欣安防科技股份有限公</option>
-							<option value="#">深圳创维数字技术有限公司</option>
-						</select>
-					</div>
-					<div class="right col-md-4 col-xs-12">
-						<ul>
-							<li>
-								<a href="#">法律声明</a>
-							</li>
-							<li>
-								<a href="#">网站地图</a>
-							</li>
-							<li>
-								<a href="#">联系我们</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
 		<script src="../js/jquery-1.9.1.js"></script>
 		<script src="../js/bootstrap.min.js"></script>
 		<script src="../js/user.js"></script>
+		<script type="text/javascript">
+			function getId(id){
+				return typeof id == "string" ? document.getElementById(id) : id;
+			}
+			getId(withdrawDeposit).onclick = function(){
+				
+				//页面高度和宽度
+				var sHeight = document.documentElement.scrollHeight;
+				var sWidth = document.documentElement.scrollWidth;
+				//可视区域高度和宽度
+				var wHeight = document.documentElement.clientHeight;
+				var wWidth = document.documentElement.clientWidth;
+				//创建遮罩
+				var oMask = document.createElement("div");
+				oMask.id = "mask";
+				oMask.style.height = sHeight + "px";
+				oMask.style.width = sWidth + "px";
+				document.body.appendChild(oMask);
+				
+				
+				var oTipBox = document.createElement("div");
+				oTipBox.id = "tipBox";
+				oTipBox.innerHTML = "<h2>请设置支付宝账号</h2>"+
+				"<form action='#' method='post' name='login'>"+
+				"<input name='zhifubao' id='zhifubao' type='text' value='' placeholder='请输入您的支付宝账号'/>"+
+				"<input type='button' value='确定' id='login'/>"+
+				"<span id='close'><i class='fa fa-times' aria-hidden='true'></i></span></form>";
+				document.body.appendChild(oTipBox);
+				//获取oTipbox的宽高,通用的居中方式，不过这里所有尺寸以PSD设计稿为准，故高度位置由CSS直接设置
+				var dHeight = oTipBox.offsetHeight;
+				var dWidth = oTipBox.offsetWidth;
+				oTipBox.style.left = (wWidth - dWidth)/2 + "px";
+				oTipBox.style.top = (wHeight - dHeight)/2 + "px"
+			    //关闭弹窗
+				var oclose = document.getElementById("close");
+				oclose.onclick = function(){
+					document.body.removeChild(oMask);
+					document.body.removeChild(oTipBox);
+				};
+			}
+		</script>
 	</body>
 </html>
